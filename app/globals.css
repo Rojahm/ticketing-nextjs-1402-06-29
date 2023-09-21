@@ -5,7 +5,7 @@
   --btn-background: ;
 }
 body {
-  color: rgba(41, 41, 41, 0.8);
+  color: red;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     241deg,
