@@ -9,13 +9,47 @@ body {
   background: rgb(255, 255, 255);
   background: linear-gradient(
     241deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(248, 244, 255, 1) 47%,
-    rgba(242, 236, 255, 1) 54%,
-    rgba(249, 246, 255, 1) 60%,
-    rgba(249, 247, 254, 1) 100%
+    #ffffff 0%,
+    #f8f4ff 47%,
+    #f2ecff 54%,
+    #f9f6ff 60%,
+    #f9f7fe 100%
   );
 }
 main {
   background: rgba(249, 247, 254, 0.5);
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+nav {
+  margin-right: 3vw;
+  display: flex;
+  align-items: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  font-size: large;
+  font-weight: 500;
+  background: -webkit-linear-gradient(#afafaf, #272727);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 200ms ease-in-out;
+}
+nav a {
+  margin-right: 15px;
+}
+nav a:hover {
+  background: -webkit-linear-gradient(#cb18f8, #383838);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Navbar {
+  width: 70vw;
+  display: flex;
+  justify-content: flex-start;
+  margin: 2vh 10vw;
 }
