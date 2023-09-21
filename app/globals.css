@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
+/* :root {
   --btn-background: ;
-}
+} */
 body {
   color: rgba(41, 41, 41, 0.8);
   background: rgb(255, 255, 255);
@@ -52,4 +52,22 @@ nav a:hover {
   display: flex;
   justify-content: flex-start;
   margin: 2vh 10vw;
+}
+.Navbar .user-nav {
+  display: flex;
+  margin-right: auto;
+}
+.btn {
+  box-shadow: inset 1px 1px 25px -15px rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid #cb18f8d2;
+  padding: 8px 20px;
+  transition: all 200ms ease-in-out;
+}
+.btn:hover {
+  color: #eee;
+  background-color: #cb18f8;
+  cursor: pointer;
 }
