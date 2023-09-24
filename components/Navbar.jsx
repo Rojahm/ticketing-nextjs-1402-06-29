@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaSignInAlt } from "react-icons/fa";
+import LogOut from "./LogOut";
 
-function Navbar() {
+function Navbar({ user }) {
   return (
     <div className="Navbar">
       <Link href={"/"}>
@@ -16,17 +17,25 @@ function Navbar() {
         />
       </Link>
       <nav>
-        <Link href={"/"}>تیکت</Link>
+        <Link href={"/tickets"}>تیکت</Link>
         <Link href={"/"}>تقویم</Link>
         <Link href={"/"}>اطلاعات</Link>
         <Link href={"/"}>قرارداد</Link>
         <Link href={"/"}>بلاگ</Link>
       </nav>
       <div className="user-nav">
-        <Link href={"/login"} className="flex items-center">
-          <FaSignInAlt size={20} />
-          <span className="mr-2">ورود</span>
-        </Link>
+        {user && (
+          <div className="flex items-center">
+            <LogOut />
+            <span className="mr-2">{user.user.email}, درود</span>
+          </div>
+        )}
+        {!user && (
+          <Link href={"/login"} className="flex items-center">
+            <FaSignInAlt size={20} />
+            <span className="mr-2">ورود</span>
+          </Link>
+        )}
       </div>
     </div>
   );

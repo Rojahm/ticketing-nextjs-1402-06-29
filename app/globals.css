@@ -19,6 +19,9 @@ body {
 main {
   background: rgba(249, 247, 254, 0.5);
 }
+.container {
+  @apply max-w-5xl my-12 mx-auto px-8;
+}
 h1 {
   font-size: 2.5rem;
   font-weight: 500;
@@ -58,7 +61,7 @@ nav a:hover {
   margin-right: auto;
 }
 .btn {
-  box-shadow: inset 1px 1px 25px -15px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 1px 1px 22px -15px rgba(0, 0, 0, 0.5);
   font-size: 1rem;
   font-weight: 500;
   border-radius: 4px;
@@ -70,4 +73,57 @@ nav a:hover {
   color: #eee;
   background-color: #cb18f8;
   cursor: pointer;
+}
+.card {
+  @apply bg-white 
+    shadow-sm 
+    rounded-md 
+    py-3 px-4 my-4 
+    relative 
+    overflow-hidden;
+}
+.card:hover {
+  @apply shadow-md;
+}
+.card h3 {
+  @apply font-bold text-gray-700 text-sm 
+    mb-0;
+}
+.card p {
+  @apply my-4 text-sm leading-6;
+}
+.pill {
+  @apply py-1 px-2 mt-3
+    inline-block 
+    text-xs font-semibold;
+}
+.pill.high {
+  @apply bg-red-300 text-red-600;
+}
+.pill.medium {
+  @apply bg-blue-300 text-blue-600;
+}
+.pill.low {
+  @apply bg-emerald-300 text-emerald-600;
+}
+.card .pill {
+  @apply absolute bottom-0 left-0 
+    rounded-tr-md;
+}
+.Footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.Footer h4 {
+  color: #fff;
+  font-size: smaller;
+}
+.Footer .credit {
+  color: #fff;
+  font-size: xx-small;
+  margin-bottom: 1px;
+}
+.rainbow {
+  @apply bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500;
 }
