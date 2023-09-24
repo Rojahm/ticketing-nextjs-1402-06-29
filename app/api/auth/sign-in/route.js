@@ -25,8 +25,8 @@ export async function POST(request) {
       }
     );
   }
-
-  return NextResponse.redirect(requestUrl.origin, {
+  console.log(requestUrl);
+  return NextResponse.redirect("/", {
     // a 301 status is required to redirect from a POST to a GET route
     status: 301,
   });

@@ -5,13 +5,14 @@ import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 
 function LogOut() {
   const router = useRouter();
-  const handleSignOut = async () => {
+  const handleSignOut = async (e) => {
+    e.preventDefault();
     const supabase = createClientComponentClient();
     const { error } = await supabase.auth.signOut();
 
     if (!error) {
       router.refresh();
-      router.push("/");
+      router.push("/login");
     }
     if (error) {
       console.log(error);
